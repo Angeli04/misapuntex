@@ -1,3 +1,4 @@
+
 html{
     font-family: 'Montserrat', sans-serif;
 }
@@ -26,7 +27,8 @@ header h1{
 }
 
 .tarjetas{
-    width: 270px;
+    display: flex;
+    justify-content: space-around;
 }
 
 
