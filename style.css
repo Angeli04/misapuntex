@@ -49,3 +49,16 @@ section div:hover{
 section div h2, section div p {
     margin: 16px;
 }
+
+footer{
+    background-color: #364552;
+    padding: 47px;
+}
+
+footer section{
+    float: right;
+}
+
+footer p{
+    margin: 0;
+}
