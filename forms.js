@@ -1,9 +1,20 @@
+
+
+function validarCo(elmail){
+   var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+   var esValido = expReg.test(elmail);
+   if (esValido == true) {
+      window.alert("mail correcto");
+   }
+}
+
 function validar(){
     let nombre = document.getElementById("nombre");
     let apellido = document.getElementById("apellido");
     let mail = document.getElementById("mail");
     var telefono=document.getElementById("telefono");
- 
+    var valormail = mail.value;
+
     let lista = document.getElementById("listaErrores")
     let listaM = document.getElementById("listaMensajes")
     let flag =true;
@@ -31,13 +42,13 @@ function validar(){
        flag=false;
     }
     if(mail.value==""){
-       console.log("Mail invalido");
-       let item = document.createElement("li");
-       lista.appendChild(item);
-       item.innerHTML="Mail invalido";
-       mail.classList.add("error");
-       flag=false;
-    }
+      console.log("Mail invalido");
+      let item = document.createElement("li");
+      lista.appendChild(item);
+      item.innerHTML="Mail invalido";
+      mail.classList.add("error");
+      flag=false;
+   }
     if (telefono.value==""||isNaN(telefono.value)) {
        console.log("Telefono invalido");
        let item = document.createElement("li");
@@ -46,9 +57,18 @@ function validar(){
        telefono.classList.add("error");
        flag = false;
     }
+    if (!nombre.value=="" && !apellido.value=="" && !mail.value=="" && !telefono.value=="" && !isNaN(telefono.value)) {
+      
     let item = document.createElement("li");
     lista.appendChild(item);
     item.innerHTML= "Formulario enviado correctamente";
     console.log("Todo ok!");
+    
+    }
     return false;
  }
+
+
+
+
+ 
