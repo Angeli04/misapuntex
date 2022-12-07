@@ -36,7 +36,7 @@ function validar(){
     if (apellido.value=="") {
        console.log("Apellido invalido");
        let item = document.createElement("li");
-       listaM.appendChild(item);
+       lista.appendChild(item);
        item.innerHTML="Apellido invalido";
        apellido.classList.add("error");
        flag=false;
