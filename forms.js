@@ -36,7 +36,7 @@ function validar(){
     if (apellido.value=="") {
        console.log("Apellido invalido");
        let item = document.createElement("li");
-       lista.appendChild(item);
+       listaM.appendChild(item);
        item.innerHTML="Apellido invalido";
        apellido.classList.add("error");
        flag=false;
@@ -63,7 +63,27 @@ function validar(){
     lista.appendChild(item);
     item.innerHTML= "Formulario enviado correctamente";
     console.log("Todo ok!");
-    
+
+    console.log("Nombre: "+nombre.value);
+    item = document.createElement("ul");
+    listaM.appendChild(item);
+    item.innerHTML="Nombre: "+nombre.value;
+
+    console.log("Apellido: "+apellido.value);
+     item = document.createElement("ul");
+      listaM.appendChild(item);
+      item.innerHTML= "Apellido: "+apellido.value;
+
+      console.log("Mail: "+mail.value);
+     item = document.createElement("ul");
+      listaM.appendChild(item);
+      item.innerHTML= "Mail: "+mail.value;
+
+      console.log("Telefono: "+telefono.value)
+      item = document.createElement("ul");
+      listaM.appendChild(item);
+      item.innerHTML= "Telefono: "+telefono.value;
+
     }
     return false;
  }
