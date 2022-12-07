@@ -83,6 +83,9 @@ function validar(){
       item = document.createElement("ul");
       listaM.appendChild(item);
       item.innerHTML= "Telefono: "+telefono.value;
+      item = document.createElement("br");
+      listaM.appendChild(item);
+      item.innerHTML;
 
     }
     return false;
